@@ -35,11 +35,31 @@
         @yield('content')
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer reveal">
         <div class="container">
             <p>© {{ date('Y') }} Nicola Consoli. Tutti i diritti riservati.</p>
         </div>
     </footer>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" type="button" aria-label="Torna su">
+        ↑
+    </button>
+
+    <div class="dev-toast" id="devToast">
+        <span class="dev-toast-icon">⌘</span>
+        <div>
+            <strong>Developer Mode sbloccata</strong>
+            <p>Hai trovato il primo easter egg del sito.</p>
+        </div>
+    </div>
+
+    <div class="dev-bar" id="devBar">
+        <div class="container dev-bar-content">
+            <span>Developer Mode</span>
+            <strong>nicolaconsoli.it / building in progress</strong>
+            <button type="button" id="closeDevMode">Disattiva</button>
+        </div>
+    </div>
 
     <script src="{{ asset('js/main.js') }}"></script>
 </body>

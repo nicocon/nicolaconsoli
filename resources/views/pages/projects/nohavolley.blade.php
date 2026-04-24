@@ -1,0 +1,151 @@
+@extends('layouts.app')
+
+@section('title', 'NohaVolley - Nicola Consoli')
+
+@section('content')
+
+<section class="page-hero project-detail-hero">
+    <div class="container">
+        <a href="{{ route('projects') }}" class="back-link">← Torna ai progetti</a>
+
+        <p class="eyebrow">Sport & community</p>
+        <h1>NohaVolley</h1>
+        <p>
+            Un progetto digitale dedicato alla pallavolo, pensato per raccontare squadre,
+            partite, news, roster e contenuti della società.
+        </p>
+
+        <div class="project-detail-meta">
+            <span>Flutter</span>
+            <span>Laravel</span>
+            <span>Supabase</span>
+            <span>Cloudinary</span>
+            <span>In evoluzione</span>
+        </div>
+    </div>
+</section>
+
+<section class="section project-detail-section">
+    <div class="container project-detail-grid">
+
+        <div class="project-detail-main">
+
+            <div class="detail-block">
+                <p class="eyebrow">L’idea</p>
+                <h2>Portare una società sportiva dentro uno spazio digitale moderno.</h2>
+                <p>
+                    NohaVolley nasce dall’idea di creare un punto di riferimento digitale
+                    per atleti, staff, famiglie, tifosi e appassionati.
+                </p>
+                <p>
+                    Non solo una semplice app o un sito, ma un ambiente dove raccogliere
+                    news, squadre, risultati, contenuti, immagini e informazioni utili.
+                </p>
+            </div>
+
+            <div class="detail-block">
+                <p class="eyebrow">Obiettivo</p>
+                <h2>Rendere più semplice seguire la vita della società.</h2>
+                <p>
+                    L’obiettivo è creare una piattaforma pulita e facile da usare, capace
+                    di comunicare meglio quello che succede dentro e fuori dal campo.
+                </p>
+            </div>
+
+            <div class="detail-block">
+                <p class="eyebrow">Funzionalità previste</p>
+                <h2>Cosa può contenere NohaVolley</h2>
+
+                <div class="detail-feature-grid">
+                    <div>
+                        <strong>News</strong>
+                        <p>Articoli, comunicati, risultati, racconti delle partite e aggiornamenti.</p>
+                    </div>
+
+                    <div>
+                        <strong>Roster</strong>
+                        <p>Giocatori, staff, ruoli, squadre e informazioni sportive.</p>
+                    </div>
+
+                    <div>
+                        <strong>Admin</strong>
+                        <p>Gestione contenuti, immagini, banner, utenti, squadre e informazioni.</p>
+                    </div>
+
+                    <div>
+                        <strong>Community</strong>
+                        <p>Uno spazio pensato per coinvolgere tifosi, famiglie e appassionati.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-block">
+                <p class="eyebrow">Cosa rappresenta</p>
+                <h2>Un progetto tecnico, ma anche molto personale.</h2>
+                <p>
+                    NohaVolley unisce sviluppo, sport, comunicazione e creatività.
+                    È un progetto che può crescere molto nel tempo, aggiungendo funzionalità
+                    sempre più utili per la società.
+                </p>
+            </div>
+
+        </div>
+
+        <aside class="project-detail-side">
+            <div class="project-side-card">
+                <div class="project-big-icon">NV</div>
+                <h3>NohaVolley</h3>
+                <p>Progetto digitale sportivo in evoluzione.</p>
+
+                <div class="side-progress">
+                    <div class="side-progress-top">
+                        <span>Avanzamento</span>
+                        <strong>55%</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill progress-orange" style="width: 55%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-side-card">
+                <h3>Stack</h3>
+                <div class="tech-list">
+                    <span>Flutter</span>
+                    <span>Laravel</span>
+                    <span>Supabase</span>
+                    <span>Cloudinary</span>
+                    <span>API</span>
+                    <span>UI Design</span>
+                </div>
+            </div>
+
+            <div class="project-side-card">
+                <h3>Stato</h3>
+                <p>
+                    In sviluppo, con tante funzionalità previste per la parte web e mobile.
+                </p>
+            </div>
+        </aside>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="cta-box">
+            <p class="eyebrow">Altri progetti</p>
+            <h2>Vuoi vedere anche gli altri lavori?</h2>
+            <p>
+                Torna alla pagina Progetti oppure scopri il progetto AmiataFlow.
+            </p>
+
+            <div class="hero-actions">
+                <a href="{{ route('projects') }}" class="btn btn-primary">Tutti i progetti</a>
+                <a href="{{ route('projects.amiataflow') }}" class="btn btn-secondary">Vai ad AmiataFlow</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@endsection
