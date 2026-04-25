@@ -1,89 +1,430 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Nicola Consoli</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.12.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.12.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.12.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="/" class="logo logo-with-avatar" aria-label="Vai alla Home">
+                <span class="navbar-avatar">
+                    <img src="/images/avatar-nicola.png" alt="Avatar di Nicola Consoli">
+                </span>
+
+                <span class="logo-text">
+                    Nicola Consoli
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Apri menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="mainNav">
+                <a href="/" class="active">Home</a>
+                <a href="/chi-sono.html">Chi sono</a>
+                <a href="/progetti.html">Progetti</a>
+                <a href="/playground.html">Playground</a>
+                <a href="/contatti.html">Contatti</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+                    <p class="eyebrow">Sviluppatore Web & Creatore Digitale</p>
+
+                    <h1>
+                        Ciao, sono Nicola.<br>
+                        Creo siti, gestionali e idee digitali.
+                    </h1>
+
+                    <p class="hero-text">
+                        Questo è il mio spazio personale online: un posto dove racconto chi sono,
+                        cosa costruisco e quali progetti sto portando avanti.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="/progetti.html" class="btn btn-primary">Guarda i progetti</a>
+                        <a href="/chi-sono.html" class="btn btn-secondary">Scopri chi sono</a>
+                    </div>
+                </div>
+
+                <div class="hero-avatar-wrap">
+                    <div class="hero-avatar-card">
+                        <img src="/images/avatar-nicola.png" alt="Avatar di Nicola Consoli">
+
+                        <div class="hero-avatar-badge">
+                            <span></span>
+                            Disponibile a creare nuove idee
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section intro-section">
+            <div class="container intro-grid">
+                <div>
+                    <p class="eyebrow">Il mio spazio online</p>
+                    <h2>Un sito personale, ma non il solito sito vetrina.</h2>
+                </div>
+
+                <div class="intro-text">
+                    <p>
+                        Qui voglio raccogliere il mio percorso, i progetti che sto creando,
+                        le tecnologie che uso e qualche contenuto più leggero per rendere la visita
+                        un po’ più interessante.
+                    </p>
+
+                    <p>
+                        L’obiettivo è avere uno spazio semplice, curato e personale, dove chi arriva
+                        possa capire subito chi sono e cosa mi piace costruire.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section featured-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">In evidenza</p>
+                    <h2>Progetti principali</h2>
+                    <p>
+                        Alcuni dei progetti che rappresentano meglio quello che faccio:
+                        gestionali, app, siti e strumenti digitali.
+                    </p>
+                </div>
+
+                <div class="featured-grid">
+
+                    <article class="featured-card">
+                        <div class="featured-icon">AF</div>
+
+                        <div class="featured-content">
+                            <span class="project-label">Gestionale aziendale</span>
+                            <h3>AmiataFlow</h3>
+                            <p>
+                                Un gestionale pensato per organizzare processi aziendali,
+                                operatori, materiali, ordini e flussi di lavoro.
+                            </p>
+                        </div>
+
+                        <a href="/progetti/amiataflow.html" class="featured-link">
+                            Scopri di più →
+                        </a>
+                    </article>
+
+                    <article class="featured-card">
+                        <div class="featured-icon">NV</div>
+
+                        <div class="featured-content">
+                            <span class="project-label">Sport & community</span>
+                            <h3>NohaVolley</h3>
+                            <p>
+                                Un progetto digitale legato alla pallavolo, con contenuti,
+                                news, squadre e funzionalità per società e tifosi.
+                            </p>
+                        </div>
+
+                        <a href="/progetti/nohavolley.html" class="featured-link">
+                            Scopri di più →
+                        </a>
+                    </article>
+
+                    <article class="featured-card">
+                        <div class="featured-icon">NC</div>
+
+                        <div class="featured-content">
+                            <span class="project-label">Sito personale</span>
+                            <h3>nicolaconsoli.it</h3>
+                            <p>
+                                Questo sito: il mio spazio personale dove racconto chi sono,
+                                cosa faccio e dove sperimento nuove idee.
+                            </p>
+                        </div>
+
+                        <a href="/progetti/nicolaconsoli.html" class="featured-link">
+                            Scopri di più →
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section now-section">
+            <div class="container now-grid">
+
+                <div class="now-content">
+                    <p class="eyebrow">In questo periodo</p>
+                    <h2>Cosa sto costruendo ora</h2>
+                    <p>
+                        Questo sito non è pensato per restare fermo. Voglio usarlo come spazio vivo,
+                        dove raccontare i progetti che sto portando avanti e le idee che sto trasformando
+                        in qualcosa di concreto.
+                    </p>
+                </div>
+
+                <div class="now-list">
+
+                    <div class="now-item">
+                        <span class="now-dot active"></span>
+
+                        <div class="now-item-content">
+                            <div class="now-title-row">
+                                <strong>AmiataFlow</strong>
+                                <span>85%</span>
+                            </div>
+
+                            <p>Nuove funzionalità gestionali, flussi operativi, PDF, documenti e moduli aziendali.</p>
+
+                            <div class="progress-track">
+                                <div class="progress-fill progress-green" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="now-item">
+                        <span class="now-dot progress"></span>
+
+                        <div class="now-item-content">
+                            <div class="now-title-row">
+                                <strong>NohaVolley</strong>
+                                <span>55%</span>
+                            </div>
+
+                            <p>Un progetto digitale sportivo che unisce contenuti, community, squadre e app.</p>
+
+                            <div class="progress-track">
+                                <div class="progress-fill progress-orange" style="width: 55%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="now-item">
+                        <span class="now-dot personal"></span>
+
+                        <div class="now-item-content">
+                            <div class="now-title-row">
+                                <strong>nicolaconsoli.it</strong>
+                                <span>45%</span>
+                            </div>
+
+                            <p>Il mio spazio personale, portfolio e laboratorio creativo online.</p>
+
+                            <div class="progress-track">
+                                <div class="progress-fill progress-blue" style="width: 45%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="now-item">
+                        <span class="now-dot idea"></span>
+
+                        <div class="now-item-content">
+                            <div class="now-title-row">
+                                <strong>Nuove idee digitali</strong>
+                                <span>25%</span>
+                            </div>
+
+                            <p>Esperimenti, automazioni, contenuti interattivi e piccoli strumenti utili.</p>
+
+                            <div class="progress-track">
+                                <div class="progress-fill progress-purple" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section stats-section">
+            <div class="container">
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <span>01</span>
+                        <strong>Web app</strong>
+                        <p>Mi piace creare strumenti digitali utili, ordinati e facili da usare.</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>02</span>
+                        <strong>Gestionali</strong>
+                        <p>Molto del mio lavoro ruota attorno a processi aziendali e dati reali.</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>03</span>
+                        <strong>Laravel</strong>
+                        <p>Sto usando Laravel per costruire progetti più puliti, scalabili e moderni.</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>04</span>
+                        <strong>Creative side</strong>
+                        <p>Mi piace aggiungere dettagli, interazioni ed easter egg che rendono un sito memorabile.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section stack-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">Stack tecnologico</p>
+                    <h2>Gli strumenti che uso per costruire progetti digitali</h2>
+                    <p>
+                        Ogni progetto ha esigenze diverse, ma ci sono tecnologie e strumenti
+                        che uso spesso per creare siti, gestionali, interfacce e applicazioni.
+                    </p>
+                </div>
+
+                <div class="stack-grid">
+
+                    <div class="stack-card">
+                        <div class="stack-icon">PHP</div>
+                        <h3>PHP</h3>
+                        <p>
+                            La base di molti progetti backend, gestionali e logiche applicative.
+                        </p>
+                    </div>
+
+                    <div class="stack-card">
+                        <div class="stack-icon">L</div>
+                        <h3>Laravel</h3>
+                        <p>
+                            Framework che sto usando per creare progetti più ordinati, moderni e scalabili.
+                        </p>
+                    </div>
+
+                    <div class="stack-card">
+                        <div class="stack-icon">DB</div>
+                        <h3>MySQL</h3>
+                        <p>
+                            Database relazionale per gestire dati, query, report e flussi aziendali.
+                        </p>
+                    </div>
+
+                    <div class="stack-card">
+                        <div class="stack-icon">JS</div>
+                        <h3>JavaScript</h3>
+                        <p>
+                            Per rendere le interfacce più dinamiche, interattive e piacevoli da usare.
+                        </p>
+                    </div>
+
+                    <div class="stack-card">
+                        <div class="stack-icon">UI</div>
+                        <h3>HTML & CSS</h3>
+                        <p>
+                            La parte visiva: struttura, responsive design, layout e dettagli grafici.
+                        </p>
+                    </div>
+
+                    <div class="stack-card">
+                        <div class="stack-icon">GIT</div>
+                        <h3>GitHub</h3>
+                        <p>
+                            Per versionare il codice, organizzare i progetti e prepararli alla pubblicazione.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section secret-home-section">
+            <div class="container secret-home-grid">
+
+                <div class="cta-box">
+                    <p class="eyebrow">Esplora</p>
+                    <h2>Vuoi vedere qualcosa di più leggero?</h2>
+                    <p>
+                        Nel Playground inserirò quiz, piccole interazioni, curiosità random
+                        e qualche esperimento creativo.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="/playground.html" class="btn btn-primary">Vai al Playground</a>
+                        <a href="/contatti.html" class="btn btn-secondary">Contattami</a>
+                    </div>
+                </div>
+
+                <div class="secret-hint-card">
+                    <div class="secret-hint-icon">⌘</div>
+
+                    <p class="eyebrow">Segreto nascosto</p>
+                    <h2>Prova a scrivere qualcosa.</h2>
+
+                    <p>
+                        Piccolo indizio: digita
+                        <strong>nicola</strong>
+                        sulla tastiera mentre navighi nel sito.
+                    </p>
+
+                    <span class="secret-keyword">n i c o l a</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer reveal">
+        <div class="container">
+            <p>© 2026 Nicola Consoli. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" type="button" aria-label="Torna su">
+        ↑
+    </button>
+
+    <div class="dev-toast" id="devToast">
+        <span class="dev-toast-icon">⌘</span>
+        <div>
+            <strong>Developer Mode sbloccata</strong>
+            <p>Hai trovato il primo easter egg del sito.</p>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <div class="dev-bar" id="devBar">
+        <div class="container dev-bar-content">
+            <span>Developer Mode</span>
+            <strong>nicolaconsoli.it / building in progress</strong>
+            <button type="button" id="closeDevMode">Disattiva</button>
+        </div>
+    </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <script src="/js/main.js"></script>
+</body>
 </html>

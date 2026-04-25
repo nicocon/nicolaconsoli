@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground - Nicola Consoli</title>
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="/" class="logo logo-with-avatar" aria-label="Vai alla Home">
+                <span class="navbar-avatar">
+                    <img src="/images/avatar-nicola.png" alt="Avatar di Nicola Consoli">
+                </span>
+
+                <span class="logo-text">
+                    Nicola Consoli
+                </span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Apri menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="mainNav">
+                <a href="/">Home</a>
+                <a href="/chi-sono.html">Chi sono</a>
+                <a href="/progetti.html">Progetti</a>
+                <a href="/playground.html" class="active">Playground</a>
+                <a href="/contatti.html">Contatti</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-hero playground-hero">
+            <div class="container">
+                <p class="eyebrow">Playground</p>
+                <h1>Una pagina più libera, curiosa e interattiva.</h1>
+                <p>
+                    Qui raccolgo piccoli esperimenti, idee leggere, curiosità random e dettagli nascosti.
+                    Non tutto deve essere serio: anche un sito personale può avere un po’ di personalità.
+                </p>
+            </div>
+        </section>
+
+        <section class="section playground-section">
+            <div class="container playground-grid">
+
+                <article class="play-card play-card-large">
+                    <div class="play-card-header">
+                        <span class="play-icon">?</span>
+                        <div>
+                            <p class="eyebrow">Random</p>
+                            <h2>Curiosità casuale</h2>
+                        </div>
+                    </div>
+
+                    <p id="randomFact" class="random-fact">
+                        Clicca il pulsante qui sotto per scoprire una curiosità.
+                    </p>
+
+                    <button class="btn btn-primary play-btn" id="factButton" type="button">
+                        Genera curiosità
+                    </button>
+                </article>
+
+                <article class="play-card">
+                    <div class="play-card-header">
+                        <span class="play-icon">Q</span>
+                        <div>
+                            <p class="eyebrow">Quiz</p>
+                            <h2>Quanto conosci Nicola?</h2>
+                        </div>
+                    </div>
+
+                    <div class="quiz-box" id="quizBox">
+                        <p class="quiz-question">
+                            Qual è una delle tecnologie principali che Nicola usa nello sviluppo web?
+                        </p>
+
+                        <div class="quiz-options">
+                            <button type="button" class="quiz-option" data-correct="false">
+                                Photoshop
+                            </button>
+
+                            <button type="button" class="quiz-option" data-correct="true">
+                                PHP e Laravel
+                            </button>
+
+                            <button type="button" class="quiz-option" data-correct="false">
+                                AutoCAD
+                            </button>
+                        </div>
+
+                        <p class="quiz-result" id="quizResult"></p>
+                    </div>
+                </article>
+
+                <article class="play-card terminal-card interactive-terminal-card">
+                    <div class="terminal-top">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="terminal-body">
+                        <div class="terminal-output" id="terminalOutput">
+                            <p><span>$</span> welcome</p>
+                            <p>Benvenuto nel mini terminale di nicolaconsoli.it</p>
+                            <p>Scrivi <strong>help</strong> per vedere i comandi disponibili.</p>
+                        </div>
+
+                        <div class="terminal-input-row">
+                            <span>$</span>
+                            <input
+                                type="text"
+                                id="terminalInput"
+                                autocomplete="off"
+                                spellcheck="false"
+                                placeholder="scrivi un comando..."
+                            >
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="section playground-extra-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">Dettagli nascosti</p>
+                    <h2>Piccole cose che renderanno il sito più personale</h2>
+                    <p>
+                        Questa pagina potrà crescere nel tempo con mini giochi, easter egg,
+                        animazioni e contenuti curiosi.
+                    </p>
+                </div>
+
+                <div class="ideas-grid">
+
+                    <div class="idea-card">
+                        <span>01</span>
+                        <h3>Quiz evoluto</h3>
+                        <p>
+                            Più domande, punteggio finale e magari un messaggio personalizzato
+                            in base al risultato.
+                        </p>
+                    </div>
+
+                    <div class="idea-card">
+                        <span>02</span>
+                        <h3>Modalità segreta</h3>
+                        <p>
+                            Un comando nascosto o una combinazione di tasti per sbloccare
+                            un tema alternativo del sito.
+                        </p>
+                    </div>
+
+                    <div class="idea-card">
+                        <span>03</span>
+                        <h3>Timeline interattiva</h3>
+                        <p>
+                            Una piccola linea del tempo con tap/click sui momenti più importanti
+                            del tuo percorso.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="cta-box">
+                    <p class="eyebrow">Work in progress</p>
+                    <h2>Questo spazio crescerà insieme al sito.</h2>
+                    <p>
+                        L’idea è aggiungere nel tempo piccoli esperimenti e dettagli che rendano
+                        nicolaconsoli.it riconoscibile e diverso dal solito portfolio.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="/progetti.html" class="btn btn-primary">Torna ai progetti</a>
+                        <a href="/contatti.html" class="btn btn-secondary">Scrivimi</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer reveal">
+        <div class="container">
+            <p>© 2026 Nicola Consoli. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" type="button" aria-label="Torna su">
+        ↑
+    </button>
+
+    <div class="dev-toast" id="devToast">
+        <span class="dev-toast-icon">⌘</span>
+        <div>
+            <strong>Developer Mode sbloccata</strong>
+            <p>Hai trovato il primo easter egg del sito.</p>
+        </div>
+    </div>
+
+    <div class="dev-bar" id="devBar">
+        <div class="container dev-bar-content">
+            <span>Developer Mode</span>
+            <strong>nicolaconsoli.it / building in progress</strong>
+            <button type="button" id="closeDevMode">Disattiva</button>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
