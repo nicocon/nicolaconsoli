@@ -77,8 +77,8 @@
             <p class="eyebrow">Dove trovarmi</p>
             <h2>Canali e link utili</h2>
             <p>
-                Qui puoi inserire i tuoi profili ufficiali. Per ora lasciamo i link pronti,
-                poi li sostituiamo con quelli reali.
+                Qui trovi i miei canali principali per contattarmi, vedere il mio percorso
+                professionale o seguire i progetti che sto costruendo.
             </p>
         </div>
 
@@ -92,7 +92,7 @@
                 </div>
             </a>
 
-            <a href="#" target="_blank" class="social-card">
+            <a href="https://www.linkedin.com/in/nicola-consoli-29777017a/" target="_blank" class="social-card">
                 <span class="social-icon">in</span>
                 <div>
                     <h3>LinkedIn</h3>
@@ -100,7 +100,7 @@
                 </div>
             </a>
 
-            <a href="#" target="_blank" class="social-card">
+            <a href="https://github.com/nicocon" target="_blank" class="social-card">
                 <span class="social-icon">GH</span>
                 <div>
                     <h3>GitHub</h3>
@@ -108,7 +108,7 @@
                 </div>
             </a>
 
-            <a href="#" target="_blank" class="social-card">
+            <a href="https://www.instagram.com/nicola.consoli/" target="_blank" class="social-card">
                 <span class="social-icon">IG</span>
                 <div>
                     <h3>Instagram</h3>
@@ -118,6 +118,95 @@
 
         </div>
 
+    </div>
+</section>
+
+<section class="section cv-request-section">
+    <div class="container">
+        <div class="cv-request-grid">
+
+            <div class="cv-request-content">
+                <p class="eyebrow">Richiesta CV</p>
+                <h2>Vuoi ricevere il mio curriculum?</h2>
+                <p>
+                    Compila il form con il tuo nome, la tua email e un breve messaggio.
+                    Riceverò la richiesta direttamente via email e potrò risponderti appena possibile.
+                </p>
+
+                <div class="cv-mini-points">
+                    <span>Full Stack Developer</span>
+                    <span>Laravel</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
+
+            <form class="cv-request-form" action="{{ route('cv.request') }}" method="POST">
+                @csrf
+
+                @if(session('cv_success'))
+                    <div class="form-alert form-alert-success">
+                        {{ session('cv_success') }}
+                    </div>
+                @endif
+
+                @if(session('cv_error'))
+                    <div class="form-alert form-alert-error">
+                        {{ session('cv_error') }}
+                    </div>
+                @endif
+
+                <div class="form-group">
+                    <label for="cv_name_contacts">Nome e cognome</label>
+                    <input
+                        type="text"
+                        id="cv_name_contacts"
+                        name="name"
+                        value="{{ old('name') }}"
+                        placeholder="Es. Mario Rossi"
+                        required
+                    >
+                    @error('name')
+                        <small>{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="cv_email_contacts">Email</label>
+                    <input
+                        type="email"
+                        id="cv_email_contacts"
+                        name="email"
+                        value="{{ old('email') }}"
+                        placeholder="nome@email.it"
+                        required
+                    >
+                    @error('email')
+                        <small>{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="cv_message_contacts">Messaggio</label>
+                    <textarea
+                        id="cv_message_contacts"
+                        name="message"
+                        rows="5"
+                        placeholder="Scrivimi qualcosa sulla richiesta o sul progetto di cui vorresti parlare."
+                    >{{ old('message') }}</textarea>
+                    @error('message')
+                        <small>{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <input type="hidden" name="source_page" value="Pagina Contatti">
+
+                <button type="submit" class="btn btn-primary">
+                    Invia richiesta CV
+                </button>
+            </form>
+
+        </div>
     </div>
 </section>
 

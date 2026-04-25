@@ -165,6 +165,95 @@
     </div>
 </section>
 
+<section class="section cv-request-section">
+    <div class="container">
+        <div class="cv-request-grid">
+
+            <div class="cv-request-content">
+                <p class="eyebrow">Curriculum</p>
+                <h2>Vuoi richiedere il mio CV?</h2>
+                <p>
+                    Se vuoi approfondire il mio percorso, le mie esperienze e le competenze
+                    che utilizzo nei progetti, puoi inviarmi una richiesta veloce tramite questo form.
+                </p>
+
+                <div class="cv-mini-points">
+                    <span>Esperienze</span>
+                    <span>Competenze tecniche</span>
+                    <span>Progetti</span>
+                    <span>Contatti</span>
+                </div>
+            </div>
+
+            <form class="cv-request-form" action="{{ route('cv.request') }}" method="POST">
+                @csrf
+
+                @if(session('cv_success'))
+                    <div class="form-alert form-alert-success">
+                        {{ session('cv_success') }}
+                    </div>
+                @endif
+
+                @if(session('cv_error'))
+                    <div class="form-alert form-alert-error">
+                        {{ session('cv_error') }}
+                    </div>
+                @endif
+
+                <div class="form-group">
+                    <label for="cv_name_projects">Nome e cognome</label>
+                    <input
+                        type="text"
+                        id="cv_name_projects"
+                        name="name"
+                        value="{{ old('name') }}"
+                        placeholder="Es. Mario Rossi"
+                        required
+                    >
+                    @error('name')
+                        <small>{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="cv_email_projects">Email</label>
+                    <input
+                        type="email"
+                        id="cv_email_projects"
+                        name="email"
+                        value="{{ old('email') }}"
+                        placeholder="nome@email.it"
+                        required
+                    >
+                    @error('email')
+                        <small>{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="cv_message_projects">Messaggio</label>
+                    <textarea
+                        id="cv_message_projects"
+                        name="message"
+                        rows="5"
+                        placeholder="Scrivimi perché vuoi ricevere il CV o per quale progetto vorresti contattarmi."
+                    >{{ old('message') }}</textarea>
+                    @error('message')
+                        <small>{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <input type="hidden" name="source_page" value="Pagina Progetti">
+
+                <button type="submit" class="btn btn-primary">
+                    Richiedi il CV
+                </button>
+            </form>
+
+        </div>
+    </div>
+</section>
+
 <section class="section">
     <div class="container">
         <div class="cta-box">
