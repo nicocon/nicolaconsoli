@@ -37,7 +37,7 @@
             <nav class="nav" id="mainNav">
                 <a href="/" class="active">Home</a>
                 <a href="/chi-sono.html">Chi sono</a>
-                <a href="/progetti.html">Progetti</a>
+                <a href="/progetti/">Progetti</a>
                 <a href="/playground.html">Playground</a>
                 <a href="/contatti.html">Contatti</a>
             </nav>
@@ -64,7 +64,7 @@
                     </p>
 
                     <div class="hero-actions">
-                        <a href="/progetti.html" class="btn btn-primary">Guarda i progetti</a>
+                        <a href="/progetti/" class="btn btn-primary">Guarda i progetti</a>
                         <a href="/chi-sono.html" class="btn btn-secondary">Scopri chi sono</a>
                     </div>
                 </div>
@@ -424,6 +424,35 @@
             <button type="button" id="closeDevMode">Disattiva</button>
         </div>
     </div>
+
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Preferenze cookie">
+        <div class="cookie-banner-content">
+            <div class="cookie-banner-text">
+                <span class="cookie-badge">Privacy</span>
+
+                <h2>Questo sito usa pochi cookie</h2>
+
+                <p>
+                    Uso solo cookie tecnici necessari al funzionamento del sito.
+                    Eventuali strumenti di analisi verranno attivati solo con il tuo consenso.
+                </p>
+            </div>
+
+            <div class="cookie-banner-actions">
+                <button type="button" class="cookie-btn cookie-btn-secondary" id="rejectCookies">
+                    Rifiuta
+                </button>
+
+                <button type="button" class="cookie-btn cookie-btn-primary" id="acceptCookies">
+                    Accetta
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <button class="cookie-settings-btn" id="cookieSettingsBtn" type="button" aria-label="Gestisci preferenze cookie">
+        Cookie
+    </button>
 
     <script src="/js/main.js"></script>
 </body>

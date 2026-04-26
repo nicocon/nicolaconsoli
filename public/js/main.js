@@ -315,4 +315,72 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+        /*
+    |--------------------------------------------------------------------------
+    | Cookie banner
+    |--------------------------------------------------------------------------
+    */
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptCookies = document.getElementById('acceptCookies');
+    const rejectCookies = document.getElementById('rejectCookies');
+    const cookieSettingsBtn = document.getElementById('cookieSettingsBtn');
+
+    const cookieConsentKey = 'nicola_cookie_consent';
+
+    function showCookieBanner() {
+        if (cookieBanner) {
+            cookieBanner.classList.add('show');
+        }
+    }
+
+    function hideCookieBanner() {
+        if (cookieBanner) {
+            cookieBanner.classList.remove('show');
+        }
+    }
+
+    function saveCookieConsent(value) {
+        localStorage.setItem(cookieConsentKey, value);
+        hideCookieBanner();
+
+        /*
+         * Qui in futuro possiamo caricare Google Analytics,
+         * Firebase Analytics o altri strumenti SOLO se value === 'accepted'.
+         */
+        if (value === 'accepted') {
+            console.log('Cookie analytics accettati');
+        }
+
+        if (value === 'rejected') {
+            console.log('Cookie analytics rifiutati');
+        }
+    }
+
+    const savedCookieConsent = localStorage.getItem(cookieConsentKey);
+
+    if (!savedCookieConsent) {
+        setTimeout(function () {
+            showCookieBanner();
+        }, 800);
+    }
+
+    if (acceptCookies) {
+        acceptCookies.addEventListener('click', function () {
+            saveCookieConsent('accepted');
+        });
+    }
+
+    if (rejectCookies) {
+        rejectCookies.addEventListener('click', function () {
+            saveCookieConsent('rejected');
+        });
+    }
+
+    if (cookieSettingsBtn) {
+        cookieSettingsBtn.addEventListener('click', function () {
+            localStorage.removeItem(cookieConsentKey);
+            showCookieBanner();
+        });
+    }
 });
